@@ -8,7 +8,7 @@ import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 
 const openai = new OpenAI({
-    apiKey: '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',
+    apiKey: process.env.REACT_APP_OPENAI_API_KEY,
     dangerouslyAllowBrowser: true
 });
 
