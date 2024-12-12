@@ -4,12 +4,11 @@ import { useParams, useNavigate, Link } from 'react-router-dom';
 import { db, auth } from '../firebase';
 import { doc, getDoc, collection, addDoc, deleteDoc, query, orderBy, onSnapshot, updateDoc, setDoc, getDocs } from 'firebase/firestore';
 import OpenAI from 'openai';
-import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 
 const openai = new OpenAI({
-   apiKey: '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',
-   dangerouslyAllowBrowser: true
+    apiKey: process.env.REACT_APP_OPENAI_API_KEY,
+    dangerouslyAllowBrowser: true
 });
 
 function PostDetail() {
@@ -26,15 +25,7 @@ function PostDetail() {
    const [prevPost, setPrevPost] = useState(null);
    const [nextPost, setNextPost] = useState(null);
 
-   const modules = {
-       toolbar: [
-           [{ 'header': [1, 2, 3, false] }],
-           ['bold', 'italic', 'underline', 'strike'],
-           [{ 'color': [] }, { 'background': [] }],
-           [{ 'align': [] }],
-           ['clean']
-       ],
-   };
+   
 
    useEffect(() => {
        const getPost = async () => {

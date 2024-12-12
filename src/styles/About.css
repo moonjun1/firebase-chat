@@ -1,416 +1,4 @@
-/* src/styles/About.css */
-.about-container {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    padding: 2.5rem;
-    margin-top: 4rem;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.profile-header {
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.profile-image-container {
-    position: relative;
-    width: 200px;
-    height: 200px;
-    margin: 0 auto 1.5rem;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 4px solid #4CAF50;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.profile-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.profile-image:hover {
-    transform: scale(1.05);
-}
-
-.profile-image-placeholder {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #f8f9fa;
-    cursor: pointer;
-}
-
-.upload-label {
-    color: #4CAF50;
-    cursor: pointer;
-    padding: 8px 16px;
-    border-radius: 20px;
-    background-color: white;
-    border: 2px solid #4CAF50;
-    transition: all 0.3s ease;
-}
-
-.upload-label:hover {
-    background-color: #4CAF50;
-    color: white;
-}
-
-.image-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 8px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.profile-image-container:hover .image-overlay {
-    opacity: 1;
-}
-
-.change-photo-label {
-    color: white;
-    cursor: pointer;
-    font-size: 0.9rem;
-}
-
-.profile-section {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-
-.profile-text h3 {
-    color: #2c3e50;
-    margin-bottom: 1.5rem;
-    font-size: 2rem;
-}
-
-.intro-text {
-    color: #34495e;
-    line-height: 1.8;
-    margin-bottom: 2.5rem;
-    font-size: 1.1rem;
-    border-left: 4px solid #4CAF50;
-    padding-left: 1rem;
-}
-
-.experience-section {
-    margin-bottom: 2.5rem;
-}
-
-.experience-item {
-    background-color: #f8f9fa;
-    padding: 1.5rem;
-    border-radius: 8px;
-    margin-bottom: 1.5rem;
-    transition: transform 0.2s ease;
-}
-
-.experience-item:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-}
-
-.experience-item h5 {
-    color: #2c3e50;
-    margin-bottom: 0.8rem;
-    font-size: 1.1rem;
-    font-weight: 600;
-}
-
-.experience-item p {
-    color: #666;
-    line-height: 1.6;
-    font-size: 1rem;
-}
-
-.philosophy-section {
-    margin-top: 2rem;
-    background-color: #f8f9fa;
-    padding: 1.5rem;
-    border-radius: 8px;
-    transition: transform 0.2s ease;
-}
-
-.skills-section h4,
-.philosophy-section h4,
-.experience-section h4 {
-    color: #4CAF50;
-    margin-bottom: 1rem;
-    font-size: 1.3rem;
-    font-weight: 600;
-}
-
-.philosophy-section ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.philosophy-section li {
-    margin-bottom: 0.8rem;
-    color: #555;
-    padding-left: 1.2rem;
-    position: relative;
-    font-size: 1rem;
-}
-
-.philosophy-section li:before {
-    content: "•";
-    color: #4CAF50;
-    position: absolute;
-    left: 0;
-}
-
-.about-container h2 {
-    color: #2c3e50;
-    margin-bottom: 2rem;
-    font-size: 2rem;
-    text-align: center;
-}
-
-/* 기술 스택 그리드 스타일 */
-.tech-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 2rem;
-    padding: 2rem;
-    background-color: #f8f9fa;
-    border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-.tech-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1.5rem;
-    background: white;
-    border-radius: 12px;
-    transition: transform 0.3s ease;
-    animation: slideIn 0.5s ease-out forwards;
-}
-
-.tech-icon {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 1rem;
-    transition: transform 0.3s ease;
-}
-
-.tech-item:hover {
-    transform: translateY(-5px);
-}
-
-.tech-item:hover .tech-icon {
-    transform: scale(1.1);
-}
-
-.tech-item h5 {
-    margin: 0.5rem 0;
-    color: #2c3e50;
-    font-size: 1rem;
-    text-align: center;
-}
-
-.progress-bar {
-    width: 100%;
-    height: 8px;
-    background-color: #e9ecef;
-    border-radius: 4px;
-    overflow: hidden;
-    margin: 0.5rem 0;
-}
-
-.progress-fill {
-    height: 100%;
-    background: linear-gradient(90deg, #4CAF50 0%, #45a049 100%);
-    transition: width 1s ease-in-out;
-}
-
-.progress-text {
-    font-size: 0.8rem;
-    color: #666;
-}
-
-/* 애니메이션 */
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* 소셜 링크 */
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin: 1rem 0;
-}
-
-.social-link {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 20px;
-    border-radius: 25px;
-    background-color: #f8f9fa;
-    color: #2c3e50;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.social-link:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-/* 반응형 디자인 */
-@media (max-width: 768px) {
-    .about-container {
-        margin-top: 2rem;
-        padding: 1.5rem;
-    }
-
-    .profile-image-container {
-        width: 150px;
-        height: 150px;
-    }
-
-    .profile-text h3 {
-        font-size: 1.7rem;
-    }
-
-    .intro-text {
-        font-size: 1rem;
-    }
-
-    .tech-grid {
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-        gap: 1rem;
-        padding: 1rem;
-    }
-
-    .tech-icon {
-        width: 40px;
-        height: 40px;
-    }
-}
-/* App.css에 있는 다크테마 변수 수정 */
-.dark-theme {
-    --bg-primary: #1a1a1a;
-    --bg-secondary: #2d2d2d;
-    --text-primary: #ffffff;
-    --text-secondary: #e0e0e0;   /* 더 밝은 색상으로 변경 */
-    --accent-color: #6cc26f;
-    --border-color: #404040;
-    --shadow-color: rgba(0, 0, 0, 0.3);
-    --navbar-bg: #2d2d2d;
-}
-
-/* About.css에 추가할 다크모드 스타일 */
-.dark-theme .about-container {
-    background-color: var(--bg-secondary);
-    color: var(--text-primary);
-}
-
-.dark-theme .profile-text h3 {
-    color: var(--text-primary);
-}
-
-.dark-theme .intro-text {
-    color: var(--text-secondary);
-}
-
-.dark-theme .experience-item {
-    background-color: #363636;
-}
-
-.dark-theme .experience-item h5 {
-    color: var(--text-primary);
-}
-
-.dark-theme .experience-item p {
-    color: var(--text-secondary);
-}
-
-.dark-theme .skills-section h4,
-.dark-theme .philosophy-section h4,
-.dark-theme .experience-section h4 {
-    color: #8cd68f;  /* 더 밝은 녹색 */
-}
-
-.dark-theme .tech-grid {
-    background-color: #363636;
-}
-
-.dark-theme .tech-item {
-    background-color: #2d2d2d;
-}
-
-.dark-theme .tech-item h5 {
-    color: var(--text-primary);
-}
-
-.dark-theme .progress-bar {
-    background-color: #404040;
-}
-
-.dark-theme .progress-text {
-    color: var(--text-secondary);
-}
-
-.dark-theme .philosophy-section {
-    background-color: #363636;
-}
-
-.dark-theme .philosophy-section li {
-    color: var(--text-secondary);
-}
-
-.dark-theme .social-link {
-    background-color: #363636;
-    color: var(--text-primary);
-}
-
-.dark-theme .about-container h2 {
-    color: var(--text-primary);
-}
-
-.dark-theme .upload-label {
-    background-color: #363636;
-    color: #8cd68f;
-    border-color: #8cd68f;
-}
-
-.dark-theme .upload-label:hover {
-    background-color: #8cd68f;
-    color: #1a1a1a;
-}
-
-.dark-theme .profile-image-placeholder {
-    background-color: #363636;
-}
-/* src/styles/About.css */
+/* About.css */
 :root {
     --primary-color: #4CAF50;
     --primary-dark: #45a049;
@@ -419,25 +7,6 @@
     --bg-light: #f8f9fa;
 }
 
-/* 커스텀 스크롤바 */
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-::-webkit-scrollbar-track {
-    background: var(--bg-light);
-}
-
-::-webkit-scrollbar-thumb {
-    background: var(--primary-color);
-    border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: var(--primary-dark);
-}
-
-/* 기본 컨테이너 */
 .about-container {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
@@ -455,51 +24,84 @@
     overflow: hidden;
 }
 
-/* 배경 그라데이션 효과 */
-.about-container::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, 
-        rgba(76, 175, 80, 0.1) 0%,
-        rgba(76, 175, 80, 0.05) 100%);
-    z-index: -1;
-}
-
-/* 프로필 섹션 */
-.profile-header {
-    text-align: center;
-    margin-bottom: 3rem;
-    animation: fadeIn 1s ease-out;
-}
-
+/* 프로필 이미지 애니메이션 */
 .profile-image-container {
     position: relative;
     width: 200px;
     height: 200px;
     margin: 0 auto 1.5rem;
     border-radius: 50%;
+    padding: 5px;
+    background: linear-gradient(45deg, 
+        #4CAF50, 
+        #45a049, 
+        #2196F3, 
+        #4CAF50
+    );
+    background-size: 400% 400%;
+    animation: gradientBorder 15s ease infinite;
+}
+
+.profile-image-container::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    bottom: 5px;
+    left: 5px;
+    background: white;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.profile-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+    z-index: 1;
+}
+
+.profile-image-container:hover .profile-image {
+    transform: rotate(360deg);
+}
+
+/* 타이틀 애니메이션 */
+.animate-title {
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    text-align: center;
+    animation: fadeInDown 1s ease;
+}
+
+/* 코딩 효과 애니메이션 */
+.coding-name {
+    display: inline-block;
     overflow: hidden;
-    border: 4px solid transparent;
-    background-image: linear-gradient(white, white), 
-                     linear-gradient(135deg, var(--primary-color), var(--primary-dark));
-    background-origin: border-box;
-    background-clip: content-box, border-box;
-    box-shadow: 
-        0 8px 32px rgba(31, 38, 135, 0.15),
-        0 4px 8px rgba(0, 0, 0, 0.1);
-    transform-style: preserve-3d;
-    transition: transform 0.3s ease;
+    white-space: nowrap;
+    border-right: 2px solid var(--primary-color);
+    animation: typing 3.5s steps(30, end) infinite,
+               blink-caret 0.75s step-end infinite;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: var(--text-primary);
 }
 
-.profile-image-container:hover {
-    transform: perspective(1000px) rotateY(5deg) rotateX(5deg);
+.typing-text {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid var(--primary-color);
+    animation: typing 4s steps(40, end),
+               blink-caret 0.75s step-end infinite;
+    margin: 1rem 0;
+    font-size: 1.1rem;
+    color: var(--text-secondary);
 }
 
-/* 기술 스택 그리드 */
+/* Tech Stack 아이템 애니메이션 */
 .tech-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -521,95 +123,42 @@
     background: white;
     border-radius: 12px;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+    animation: fadeInUp 1s ease;
 }
 
-.tech-item::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), 
-                rgba(255,255,255,0.3) 0%, 
-                transparent 50%);
-    opacity: 0;
-    transition: opacity 0.3s ease;
+.tech-item:hover {
+    transform: translateY(-10px) rotateY(10deg);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
-.tech-item:hover::after {
-    opacity: 1;
+.tech-icon {
+    width: 60px;
+    height: 60px;
+    transition: transform 0.3s ease;
 }
 
-/* 프로그레스 바 */
-.progress-bar {
-    width: 100%;
-    height: 8px;
-    background: var(--bg-light);
-    border-radius: 4px;
-    overflow: hidden;
-    margin: 0.5rem 0;
-    position: relative;
-}
-
-.progress-fill {
-    height: 100%;
-    background: linear-gradient(90deg, var(--primary-color), var(--primary-dark));
-    position: relative;
-    transition: width 1s ease-in-out;
-}
-
-.progress-fill::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 30px;
-    background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(255, 255, 255, 0.4),
-        transparent
-    );
-    animation: progress-shine 1.5s infinite;
-}
-
-/* 섹션 애니메이션 */
-.fade-in-section {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    will-change: opacity, transform;
-}
-
-.fade-in-section.is-visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* 경험 섹션 카드 */
-.experience-item {
-    background: white;
-    border-radius: 15px;
-    padding: 2rem;
-    margin-bottom: 1.5rem;
-    box-shadow: 
-        0 5px 15px rgba(0, 0, 0, 0.1),
-        0 15px 35px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-.experience-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 
-        0 8px 25px rgba(0, 0, 0, 0.1),
-        0 20px 45px rgba(0, 0, 0, 0.08);
+.tech-item:hover .tech-icon {
+    transform: scale(1.2);
 }
 
 /* 애니메이션 키프레임 */
-@keyframes fadeIn {
+@keyframes gradientBorder {
+    0% { background-position: 0% 50% }
+    50% { background-position: 100% 50% }
+    100% { background-position: 0% 50% }
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--primary-color) }
+}
+
+@keyframes fadeInDown {
     from {
         opacity: 0;
         transform: translateY(-20px);
@@ -620,15 +169,20 @@
     }
 }
 
-@keyframes progress-shine {
-    0% { transform: translateX(-100%); }
-    100% { transform: translateX(300%); }
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-/* 다크 모드 스타일 */
-.dark-theme .about-container {
-    background: rgba(45, 45, 45, 0.95);
-    color: white;
+/* 다크 모드 지원 */
+.dark-theme .profile-image-container::before {
+    background: #2d2d2d;
 }
 
 .dark-theme .tech-item {
@@ -636,8 +190,9 @@
     color: white;
 }
 
-.dark-theme .experience-item {
-    background: #363636;
+.dark-theme .about-container {
+    background: rgba(45, 45, 45, 0.95);
+    color: white;
 }
 
 /* 반응형 디자인 */
@@ -647,14 +202,151 @@
         padding: 1.5rem;
     }
 
+    .profile-image-container {
+        width: 150px;
+        height: 150px;
+    }
+
+    .coding-name {
+        font-size: 1.5rem;
+    }
+
     .tech-grid {
         grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
         gap: 1rem;
         padding: 1rem;
     }
 
-    .profile-image-container {
-        width: 150px;
-        height: 150px;
+    .tech-icon {
+        width: 40px;
+        height: 40px;
     }
+}
+
+/* 기존 스타일 유지 */
+.experience-section {
+    margin-bottom: 2.5rem;
+}
+
+.experience-item {
+    background-color: var(--bg-light);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.philosophy-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.philosophy-list li {
+    margin-bottom: 0.8rem;
+    padding-left: 1.2rem;
+    position: relative;
+    font-size: 1rem;
+    color: var(--text-secondary);
+}
+
+.philosophy-list li:before {
+    content: "•";
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 1rem 0;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background-color: var(--bg-light);
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background-color: var(--bg-light);
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.social-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 추가 다크모드 스타일 */
+.dark-theme .experience-item {
+    background-color: #363636;
+}
+
+.dark-theme .social-link {
+    background-color: #363636;
+    color: white;
+}
+
+.dark-theme .coding-name,
+.dark-theme .typing-text {
+    color: white;
+}
+
+.dark-theme .philosophy-list li {
+    color: #e0e0e0;
+}
+
+.dark-theme .experience-description {
+    color: #e0e0e0;
+}
+
+.dark-theme .tech-name {
+    color: white;
+}
+
+/* 스크롤바 커스터마이징 */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-light);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-dark);
 }
